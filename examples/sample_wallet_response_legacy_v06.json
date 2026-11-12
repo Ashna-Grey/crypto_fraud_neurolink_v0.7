@@ -1,0 +1,579 @@
+{
+  "wallet_id": "dataset_row_0_no_address",
+  "model_versions": {
+    "random_forest": "original_20features",
+    "isolation_forest": "original_B6b_bootstrap",
+    "rule_engine": "original_eight_rules_plus_context_policy"
+  },
+  "random_forest": {
+    "status": "OK",
+    "fraud_probability": 0.006267634061702635,
+    "raw_fraud_probability": 0.03,
+    "calibrated": true,
+    "calibration_note": "original training calibration, no current distribution-shift guarantee",
+    "conformal_decision": "NON_FRAUD",
+    "tree_disagreement_variance": 0.02912912912912913,
+    "input_quality": 1.0,
+    "attribution": {
+      "method": "averaged_tree_path_probability_differences",
+      "raw_fraud_probability": 0.03,
+      "raw_probability_baseline": 0.49980879790940724,
+      "reconstruction_error": 6.938893903907228e-16,
+      "attributions_are_for_calibrated_probability": false,
+      "reasoning": [
+        {
+          "feature": "Time Diff between first and last (Mins)",
+          "observed_value": 704785.63,
+          "direction": "away_from_fraud",
+          "raw_probability_contribution": -0.22586782,
+          "explanation": "Local tree-path attribution to raw RF output, not a causal explanation or contribution to calibrated probability."
+        },
+        {
+          "feature": "total transactions (including tnx to create contract",
+          "observed_value": 810.0,
+          "direction": "away_from_fraud",
+          "raw_probability_contribution": -0.13604141,
+          "explanation": "Local tree-path attribution to raw RF output, not a causal explanation or contribution to calibrated probability."
+        },
+        {
+          "feature": "Sent tnx",
+          "observed_value": 721.0,
+          "direction": "away_from_fraud",
+          "raw_probability_contribution": -0.11362795,
+          "explanation": "Local tree-path attribution to raw RF output, not a causal explanation or contribution to calibrated probability."
+        },
+        {
+          "feature": "Unique Received From Addresses",
+          "observed_value": 40.0,
+          "direction": "toward_fraud",
+          "raw_probability_contribution": 0.08038214,
+          "explanation": "Local tree-path attribution to raw RF output, not a causal explanation or contribution to calibrated probability."
+        },
+        {
+          "feature": "total ether received",
+          "observed_value": 586.4666748,
+          "direction": "away_from_fraud",
+          "raw_probability_contribution": -0.05125393,
+          "explanation": "Local tree-path attribution to raw RF output, not a causal explanation or contribution to calibrated probability."
+        },
+        {
+          "feature": "avg val received",
+          "observed_value": 6.589513,
+          "direction": "away_from_fraud",
+          "raw_probability_contribution": -0.0473964,
+          "explanation": "Local tree-path attribution to raw RF output, not a causal explanation or contribution to calibrated probability."
+        },
+        {
+          "feature": "Avg min between received tnx",
+          "observed_value": 1093.71,
+          "direction": "toward_fraud",
+          "raw_probability_contribution": 0.04268871,
+          "explanation": "Local tree-path attribution to raw RF output, not a causal explanation or contribution to calibrated probability."
+        },
+        {
+          "feature": "ERC20 uniq rec contract addr",
+          "observed_value": 58.0,
+          "direction": "toward_fraud",
+          "raw_probability_contribution": 0.02588631,
+          "explanation": "Local tree-path attribution to raw RF output, not a causal explanation or contribution to calibrated probability."
+        }
+      ]
+    },
+    "reasoning": [
+      {
+        "feature": "Time Diff between first and last (Mins)",
+        "observed_value": 704785.63,
+        "direction": "away_from_fraud",
+        "raw_probability_contribution": -0.22586782,
+        "explanation": "Local tree-path attribution to raw RF output, not a causal explanation or contribution to calibrated probability."
+      },
+      {
+        "feature": "total transactions (including tnx to create contract",
+        "observed_value": 810.0,
+        "direction": "away_from_fraud",
+        "raw_probability_contribution": -0.13604141,
+        "explanation": "Local tree-path attribution to raw RF output, not a causal explanation or contribution to calibrated probability."
+      },
+      {
+        "feature": "Sent tnx",
+        "observed_value": 721.0,
+        "direction": "away_from_fraud",
+        "raw_probability_contribution": -0.11362795,
+        "explanation": "Local tree-path attribution to raw RF output, not a causal explanation or contribution to calibrated probability."
+      },
+      {
+        "feature": "Unique Received From Addresses",
+        "observed_value": 40.0,
+        "direction": "toward_fraud",
+        "raw_probability_contribution": 0.08038214,
+        "explanation": "Local tree-path attribution to raw RF output, not a causal explanation or contribution to calibrated probability."
+      },
+      {
+        "feature": "total ether received",
+        "observed_value": 586.4666748,
+        "direction": "away_from_fraud",
+        "raw_probability_contribution": -0.05125393,
+        "explanation": "Local tree-path attribution to raw RF output, not a causal explanation or contribution to calibrated probability."
+      },
+      {
+        "feature": "avg val received",
+        "observed_value": 6.589513,
+        "direction": "away_from_fraud",
+        "raw_probability_contribution": -0.0473964,
+        "explanation": "Local tree-path attribution to raw RF output, not a causal explanation or contribution to calibrated probability."
+      },
+      {
+        "feature": "Avg min between received tnx",
+        "observed_value": 1093.71,
+        "direction": "toward_fraud",
+        "raw_probability_contribution": 0.04268871,
+        "explanation": "Local tree-path attribution to raw RF output, not a causal explanation or contribution to calibrated probability."
+      },
+      {
+        "feature": "ERC20 uniq rec contract addr",
+        "observed_value": 58.0,
+        "direction": "toward_fraud",
+        "raw_probability_contribution": 0.02588631,
+        "explanation": "Local tree-path attribution to raw RF output, not a causal explanation or contribution to calibrated probability."
+      }
+    ]
+  },
+  "isolation_forest": {
+    "status": "OK",
+    "raw_anomaly_score": 0.5462220970977704,
+    "normality_score": -0.5462220970977704,
+    "anomaly_score": 0.5462220970977704,
+    "anomaly_percentile": 94.37299712134,
+    "bootstrap_anomaly_variance": 8.347043702790304e-05,
+    "fraud_probability": null,
+    "missing_features": [
+      "current_eth_balance"
+    ],
+    "anomaly_priority_band": "ELEVATED_ANOMALY",
+    "applicability": {
+      "score": 0.2,
+      "reason": "Wallet has >200 transactions; D2 source data capped at 200. This is a cross-dataset support warning, not a fitted IF feature.",
+      "outside_training_minmax_count": 2,
+      "missing_feature_ratio": 0.05
+    },
+    "reasoning": [
+      {
+        "type": "marginal_comparison",
+        "description": "Total ERC20 tnxs=265 (HIGH; reference percentile 100.0) | Unique Sent To Addresses=118 (HIGH; reference percentile 100.0) | ERC20 uniq sent token name=3.68888 (HIGH; reference percentile 99.6)",
+        "warning": "Marginal feature-tail summary, NOT causal or IF feature attribution."
+      }
+    ],
+    "score_semantics": "D2_relative_anomaly_percentile_not_fraud_probability"
+  },
+  "rule_based_engine": {
+    "status": "PARTIAL",
+    "risk_score": 0.0,
+    "score_semantics": "weighted_sum_of_fired_original_rules_not_calibrated_probability",
+    "evaluated": [
+      {
+        "rule": "rapid_transaction_activity",
+        "triggered": false,
+        "dependencies": [
+          "avg_min_between_sent",
+          "avg_min_between_received",
+          "total_transactions"
+        ],
+        "observed": {
+          "avg_min_between_sent": 844.26,
+          "avg_min_between_received": 1093.71,
+          "total_transactions": 810.0
+        },
+        "threshold": null,
+        "weight": 2.8,
+        "explanation": "rapid_transaction_activity: original deterministic rule not triggered; no causal fraud claim."
+      },
+      {
+        "rule": "fund_splitting",
+        "triggered": false,
+        "dependencies": [
+          "sent_transactions",
+          "unique_destinations",
+          "avg_min_between_sent"
+        ],
+        "observed": {
+          "sent_transactions": 721.0,
+          "unique_destinations": 118.0,
+          "avg_min_between_sent": 844.26
+        },
+        "threshold": null,
+        "weight": 1.1,
+        "explanation": "fund_splitting: original deterministic rule not triggered; no causal fraud claim."
+      },
+      {
+        "rule": "fund_consolidation",
+        "triggered": false,
+        "dependencies": [
+          "received_transactions",
+          "unique_sources",
+          "avg_min_between_received"
+        ],
+        "observed": {
+          "received_transactions": 89.0,
+          "unique_sources": 40.0,
+          "avg_min_between_received": 1093.71
+        },
+        "threshold": null,
+        "weight": 6.43,
+        "explanation": "fund_consolidation: original deterministic rule not triggered; no causal fraud claim."
+      },
+      {
+        "rule": "new_wallet_high_value",
+        "triggered": false,
+        "dependencies": [
+          "wallet_lifetime_minutes",
+          "total_eth_received",
+          "total_eth_sent",
+          "total_transactions"
+        ],
+        "observed": {
+          "wallet_lifetime_minutes": 704785.63,
+          "total_eth_received": 586.4666748,
+          "total_eth_sent": 865.6910932,
+          "total_transactions": 810.0
+        },
+        "threshold": 1747.1920236200042,
+        "weight": 0.24,
+        "explanation": "new_wallet_high_value: original deterministic rule not triggered; no causal fraud claim."
+      },
+      {
+        "rule": "dust_spam_activity",
+        "triggered": false,
+        "dependencies": [
+          "sent_transactions",
+          "unique_destinations",
+          "avg_value_sent"
+        ],
+        "observed": {
+          "sent_transactions": 721.0,
+          "unique_destinations": 118.0,
+          "avg_value_sent": 1.200681
+        },
+        "threshold": 0.0,
+        "weight": 0.98,
+        "explanation": "dust_spam_activity: original deterministic rule not triggered; no causal fraud claim."
+      },
+      {
+        "rule": "high_activity",
+        "triggered": false,
+        "dependencies": [
+          "total_transactions",
+          "wallet_lifetime_minutes"
+        ],
+        "observed": {
+          "total_transactions": 810.0,
+          "wallet_lifetime_minutes": 704785.63
+        },
+        "threshold": null,
+        "weight": 0.62,
+        "explanation": "high_activity: original deterministic rule not triggered; no causal fraud claim."
+      }
+    ],
+    "triggered_rules": [],
+    "non_triggered_rules": [
+      "rapid_transaction_activity",
+      "fund_splitting",
+      "fund_consolidation",
+      "new_wallet_high_value",
+      "dust_spam_activity",
+      "high_activity"
+    ],
+    "unavailable_rules": [
+      {
+        "rule": "contract_activity",
+        "reason": "missing_features",
+        "missing": [
+          "total_eth_sent_contracts",
+          "created_contracts"
+        ]
+      },
+      {
+        "rule": "erc20_activity",
+        "reason": "missing_features",
+        "missing": [
+          "erc20_unique_sent_addresses"
+        ]
+      }
+    ],
+    "coverage": 0.75,
+    "weights_from_original_rule_f1_not_revalidated": true,
+    "warning": "A partial score is a lower bound on weighted triggered-rule support, not a complete risk estimate."
+  },
+  "reasoning_engine": {
+    "facts": {
+      "total_transactions": 810.0,
+      "wallet_lifetime_minutes": 704785.63,
+      "avg_min_between_sent": 844.26,
+      "avg_min_between_received": 1093.71,
+      "sent_transactions": 721.0,
+      "received_transactions": 89.0,
+      "unique_sources": 40.0,
+      "unique_destinations": 118.0,
+      "avg_value_sent": 1.200681,
+      "total_eth_sent": 865.6910932,
+      "total_eth_received": 586.4666748,
+      "erc20_transactions": 265.0,
+      "erc20_unique_sent_tokens": 39.0,
+      "average_transactions_per_day_over_observed_span": 1.654971313759618
+    },
+    "supporting_evidence": [
+      {
+        "proposition": "high_transaction_volume",
+        "sources": [
+          "input"
+        ],
+        "features": [
+          "total_transactions"
+        ],
+        "value": 810.0,
+        "does_not_imply_fraud": true
+      }
+    ],
+    "contradictory_evidence": [
+      {
+        "proposition": "sustained_high_transaction_rate",
+        "reason": "Observed mean daily rate is below provisional policy boundary",
+        "mean_rate": 1.65497
+      }
+    ],
+    "dependency_adjustments": [],
+    "arbitration": [
+      {
+        "rule_id": "VOLUME_CONTEXT",
+        "action": "inspect_activity_rate",
+        "reason": "High aggregate count needs temporal context",
+        "source_features": [
+          "total_transactions"
+        ]
+      },
+      {
+        "rule_id": "SLOW_VOLUME",
+        "action": "discount_volume_only_evidence",
+        "reason": "High lifetime volume is not proof of a fast transaction burst. Slow mean rate does not establish legitimacy.",
+        "source_features": [
+          "total_transactions",
+          "wallet_lifetime_minutes"
+        ],
+        "effect_on_rf": "reason_specific_not_blanket_override"
+      },
+      {
+        "rule_id": "IF_ROLE",
+        "action": "treat_as_distributional_evidence",
+        "reason": "IF anomaly/normality scores are not fraud probabilities and cannot independently establish legitimacy"
+      }
+    ],
+    "normalized_evidence": [
+      {
+        "source_engine": "random_forest",
+        "proposition": "rf_local_path_contribution",
+        "feature": "Time Diff between first and last (Mins)",
+        "direction": "away_from_fraud",
+        "raw_probability_contribution": -0.22586782,
+        "source_features": [
+          "Time Diff between first and last (Mins)"
+        ],
+        "explanation_kind": "exact_tree_path_attribution_not_causal"
+      },
+      {
+        "source_engine": "random_forest",
+        "proposition": "rf_local_path_contribution",
+        "feature": "total transactions (including tnx to create contract",
+        "direction": "away_from_fraud",
+        "raw_probability_contribution": -0.13604141,
+        "source_features": [
+          "total transactions (including tnx to create contract"
+        ],
+        "explanation_kind": "exact_tree_path_attribution_not_causal"
+      },
+      {
+        "source_engine": "random_forest",
+        "proposition": "rf_local_path_contribution",
+        "feature": "Sent tnx",
+        "direction": "away_from_fraud",
+        "raw_probability_contribution": -0.11362795,
+        "source_features": [
+          "Sent tnx"
+        ],
+        "explanation_kind": "exact_tree_path_attribution_not_causal"
+      },
+      {
+        "source_engine": "random_forest",
+        "proposition": "rf_local_path_contribution",
+        "feature": "Unique Received From Addresses",
+        "direction": "toward_fraud",
+        "raw_probability_contribution": 0.08038214,
+        "source_features": [
+          "Unique Received From Addresses"
+        ],
+        "explanation_kind": "exact_tree_path_attribution_not_causal"
+      },
+      {
+        "source_engine": "random_forest",
+        "proposition": "rf_local_path_contribution",
+        "feature": "total ether received",
+        "direction": "away_from_fraud",
+        "raw_probability_contribution": -0.05125393,
+        "source_features": [
+          "total ether received"
+        ],
+        "explanation_kind": "exact_tree_path_attribution_not_causal"
+      },
+      {
+        "source_engine": "random_forest",
+        "proposition": "rf_local_path_contribution",
+        "feature": "avg val received",
+        "direction": "away_from_fraud",
+        "raw_probability_contribution": -0.0473964,
+        "source_features": [
+          "avg val received"
+        ],
+        "explanation_kind": "exact_tree_path_attribution_not_causal"
+      },
+      {
+        "source_engine": "random_forest",
+        "proposition": "rf_local_path_contribution",
+        "feature": "Avg min between received tnx",
+        "direction": "toward_fraud",
+        "raw_probability_contribution": 0.04268871,
+        "source_features": [
+          "Avg min between received tnx"
+        ],
+        "explanation_kind": "exact_tree_path_attribution_not_causal"
+      },
+      {
+        "source_engine": "random_forest",
+        "proposition": "rf_local_path_contribution",
+        "feature": "ERC20 uniq rec contract addr",
+        "direction": "toward_fraud",
+        "raw_probability_contribution": 0.02588631,
+        "source_features": [
+          "ERC20 uniq rec contract addr"
+        ],
+        "explanation_kind": "exact_tree_path_attribution_not_causal"
+      },
+      {
+        "source_engine": "rule_based_engine",
+        "proposition": "rapid_transaction_activity",
+        "triggered": false,
+        "source_features": [
+          "avg_min_between_sent",
+          "avg_min_between_received",
+          "total_transactions"
+        ],
+        "explanation_kind": "deterministic_policy_rule"
+      },
+      {
+        "source_engine": "rule_based_engine",
+        "proposition": "fund_splitting",
+        "triggered": false,
+        "source_features": [
+          "sent_transactions",
+          "unique_destinations",
+          "avg_min_between_sent"
+        ],
+        "explanation_kind": "deterministic_policy_rule"
+      },
+      {
+        "source_engine": "rule_based_engine",
+        "proposition": "fund_consolidation",
+        "triggered": false,
+        "source_features": [
+          "received_transactions",
+          "unique_sources",
+          "avg_min_between_received"
+        ],
+        "explanation_kind": "deterministic_policy_rule"
+      },
+      {
+        "source_engine": "rule_based_engine",
+        "proposition": "new_wallet_high_value",
+        "triggered": false,
+        "source_features": [
+          "wallet_lifetime_minutes",
+          "total_eth_received",
+          "total_eth_sent",
+          "total_transactions"
+        ],
+        "explanation_kind": "deterministic_policy_rule"
+      },
+      {
+        "source_engine": "rule_based_engine",
+        "proposition": "dust_spam_activity",
+        "triggered": false,
+        "source_features": [
+          "sent_transactions",
+          "unique_destinations",
+          "avg_value_sent"
+        ],
+        "explanation_kind": "deterministic_policy_rule"
+      },
+      {
+        "source_engine": "rule_based_engine",
+        "proposition": "high_activity",
+        "triggered": false,
+        "source_features": [
+          "total_transactions",
+          "wallet_lifetime_minutes"
+        ],
+        "explanation_kind": "deterministic_policy_rule"
+      }
+    ],
+    "policy": {
+      "high_volume_count": 100,
+      "low_rate_per_day": 5.0,
+      "high_rate_per_day": 100.0,
+      "conflict_review_gap": 0.35,
+      "minimum_applicability": 0.4,
+      "max_decision_uncertainty": 0.48,
+      "fraud_decision_threshold": 0.7,
+      "legitimate_decision_threshold": 0.3
+    },
+    "reasoning_method": "deterministic_provenance_aware_context_rules_not_LLM"
+  },
+  "belief_fusion": {
+    "method": "proposed_reliability_discounted_opinion_pooling_with_contextual_arbitration",
+    "fused_risk_score": 0.004558,
+    "uncertainty": 0.769902,
+    "calibrated": false,
+    "pairwise_conflict_proxy": 0.001152,
+    "score_semantics": "heuristic_priority_not_fraud_probability",
+    "opinion_components": [
+      {
+        "engine": "random_forest",
+        "belief_fraud": 0.004387,
+        "belief_legitimate": 0.695613,
+        "uncommitted_uncertainty": 0.3,
+        "credibility": 0.7
+      },
+      {
+        "engine": "rule_based_engine",
+        "belief_fraud": 0.0,
+        "belief_legitimate": 0.2625,
+        "uncommitted_uncertainty": 0.7375,
+        "credibility": 0.2625
+      }
+    ],
+    "adjustments": {
+      "rf_contextual_discount": 1.0,
+      "rf_volume_attribution_fraction_of_positive_top_features": 0.0,
+      "rule_dependency_discount": 1.0,
+      "rule_coverage": 0.75,
+      "if_applicability": 0.2
+    },
+    "reliability_source": "provisional_explicit_policy_weights_not_Brier_validated"
+  },
+  "final_output": {
+    "decision": "MANUAL_REVIEW",
+    "explanation": "RULE_EVIDENCE_INCOMPLETE; IF_TRAINING_APPLICABILITY_LOW_OR_UNAVAILABLE; EXCESSIVE_UNCERTAINTY",
+    "reasons": [
+      "RULE_EVIDENCE_INCOMPLETE",
+      "IF_TRAINING_APPLICABILITY_LOW_OR_UNAVAILABLE",
+      "EXCESSIVE_UNCERTAINTY"
+    ]
+  },
+  "notice": "Research prototype. No independently validated new fusion calibration, novelty, or live fraud-performance claim."
+}

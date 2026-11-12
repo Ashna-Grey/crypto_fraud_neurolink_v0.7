@@ -1,0 +1,48 @@
+{
+    "method": "mondrian_split_conformal",
+    "method_description": "Class-conditional split conformal prediction",
+    "nonconformity_method": "1 - calibrated true-class probability",
+    "alpha": 0.05,
+    "target_coverage": 0.95,
+    "classes": {
+        "0": {
+            "label": "non-fraud",
+            "sample_count": 766,
+            "q_hat": 0.052154574786868246,
+            "probability_threshold": 0.9478454252131318,
+            "finite_sample_rank": 729
+        },
+        "1": {
+            "label": "fraud",
+            "sample_count": 218,
+            "q_hat": 0.5145777519033916,
+            "probability_threshold": 0.4854222480966084,
+            "finite_sample_rank": 209
+        }
+    },
+    "probability_calibration_method": "sigmoid",
+    "model": "RandomForestClassifier",
+    "feature_count": 20,
+    "features": [
+        "Total ERC20 tnxs",
+        "Time Diff between first and last (Mins)",
+        "ERC20 uniq rec contract addr",
+        "ERC20 uniq rec token name",
+        "ERC20 uniq rec addr",
+        "Avg min between received tnx",
+        "total ether received",
+        "total transactions (including tnx to create contract",
+        "Unique Received From Addresses",
+        "avg val received",
+        "total ether balance",
+        "Received Tnx",
+        "ERC20 max val rec",
+        "ERC20 total Ether received",
+        "max value received",
+        "total Ether sent",
+        "Sent tnx",
+        "ERC20 min val rec",
+        "ERC20 uniq sent token name",
+        "min value received"
+    ]
+}

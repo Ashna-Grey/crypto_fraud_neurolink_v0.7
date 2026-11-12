@@ -1,0 +1,148 @@
+{
+  "version": "0.7.0",
+  "training_mode": "cross_fitted_meta_with_original_RF_source_train_only",
+  "base_models": {
+    "rf": "original_RF_1000_trees_deployed_and_1000_trees_OOF",
+    "if": "original_IF_D2_only",
+    "rules": "original_eight_rule_activations"
+  },
+  "n_estimators_oof": 1000,
+  "folds": 5,
+  "duplicate_removed": {
+    "meta_train": 374,
+    "meta_calibration": 61,
+    "meta_conformal": 57,
+    "meta_historical_test": 61
+  },
+  "counts": {
+    "meta_train": 6514,
+    "meta_calibration": 923,
+    "meta_conformal": 927,
+    "meta_historical_test": 924
+  },
+  "class_balance": {
+    "meta_train": 0.17853853239177156,
+    "meta_calibration": 0.1744312026002167,
+    "meta_conformal": 0.18122977346278318,
+    "meta_historical_test": 0.1774891774891775
+  },
+  "meta_features": [
+    "rf_raw_probability",
+    "rf_volume_path_contribution",
+    "rf_temporal_path_contribution",
+    "rf_erc20_path_contribution",
+    "if_anomaly_percentile",
+    "if_bootstrap_variance",
+    "if_applicability",
+    "log_total_transactions",
+    "log_activity_rate",
+    "log_observation_days",
+    "rule_trigger_count",
+    "rule_coverage",
+    "activity_rate_missing",
+    "if_unavailable",
+    "if_training_activity_unsupported",
+    "rf_missing_fraction",
+    "rule_fired_rapid_transaction_activity",
+    "rule_unavailable_rapid_transaction_activity",
+    "rule_fired_fund_splitting",
+    "rule_unavailable_fund_splitting",
+    "rule_fired_fund_consolidation",
+    "rule_unavailable_fund_consolidation",
+    "rule_fired_new_wallet_high_value",
+    "rule_unavailable_new_wallet_high_value",
+    "rule_fired_dust_spam_activity",
+    "rule_unavailable_dust_spam_activity",
+    "rule_fired_contract_activity",
+    "rule_unavailable_contract_activity",
+    "rule_fired_erc20_activity",
+    "rule_unavailable_erc20_activity",
+    "rule_fired_high_activity",
+    "rule_unavailable_high_activity"
+  ],
+  "calibration": "held_out_meta_Platt_original_calibration_indices; separate_original_conformal_indices_for_conformal",
+  "historical_test": {
+    "learned_spline_gam": {
+      "n": 924,
+      "fraud_count": 164,
+      "roc_auc": 0.996895,
+      "pr_auc": 0.987221,
+      "brier": 0.01784,
+      "log_loss": 0.061167,
+      "accuracy": 0.972944,
+      "precision": 0.901734,
+      "recall": 0.95122,
+      "f1": 0.925816,
+      "confusion_matrix": [
+        [
+          743,
+          17
+        ],
+        [
+          8,
+          156
+        ]
+      ]
+    },
+    "original_rf_calibrated": {
+      "n": 924,
+      "fraud_count": 164,
+      "roc_auc": 0.997733,
+      "pr_auc": 0.990848,
+      "brier": 0.014295,
+      "log_loss": 0.049432,
+      "accuracy": 0.977273,
+      "precision": 0.928144,
+      "recall": 0.945122,
+      "f1": 0.936556,
+      "confusion_matrix": [
+        [
+          748,
+          12
+        ],
+        [
+          9,
+          155
+        ]
+      ]
+    },
+    "original_rf_raw": {
+      "n": 924,
+      "fraud_count": 164,
+      "roc_auc": 0.997733,
+      "pr_auc": 0.990848,
+      "brier": 0.015915,
+      "log_loss": 0.061068,
+      "accuracy": 0.977273,
+      "precision": 0.928144,
+      "recall": 0.945122,
+      "f1": 0.936556,
+      "confusion_matrix": [
+        [
+          748,
+          12
+        ],
+        [
+          9,
+          155
+        ]
+      ]
+    }
+  },
+  "dataset_sha256": "69dc712d0fe4e70e121b4414d80d078ae6b125060c3734be47a17f0d95aaf321",
+  "limitations": [
+    "D1 has been analyzed repeatedly; historical test is NOT independent external evaluation.",
+    "The original RF selected its 20 features using original training data. OOF models use those preselected columns.",
+    "The original RF retains training-split duplicate multiplicities while OOF RF is trained after exact-profile deduplication.",
+    "The original RF calibration and meta calibration reuse the same original D1 calibration split (different targets and score stages).",
+    "Calibrated probabilities may not transport to new blockchain populations or changed fraud prevalence.",
+    "Rule thresholds and IF training distribution are unchanged. IF is never treated as fraud probability.",
+    "Local terms attribute model scores, not causes or evidence of criminal activity."
+  ],
+  "conformal": {
+    "alpha": 0.1,
+    "nonconformity_quantile": 0.0700969471406152,
+    "source": "disjoint_original_conformal_indices",
+    "coverage_assumption": "exchangeability_not_proven_under_dataset_shift"
+  }
+}

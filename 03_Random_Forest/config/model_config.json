@@ -1,0 +1,67 @@
+{
+    "model_name": "Ethereum Fraud Random Forest",
+    "model_type": "RandomForestClassifier",
+    "framework": "scikit-learn",
+    "sklearn_version": "1.6.1",
+    "python_version": "3.13.16",
+    "target": "FLAG",
+    "classes": [
+        0,
+        1
+    ],
+    "class_mapping": {
+        "0": "Non-Fraud",
+        "1": "Fraud"
+    },
+    "feature_count": 20,
+    "features": [
+        "Total ERC20 tnxs",
+        "Time Diff between first and last (Mins)",
+        "ERC20 total Ether received",
+        "ERC20 uniq rec contract addr",
+        "ERC20 uniq rec token name",
+        "ERC20 uniq rec addr",
+        "Avg min between received tnx",
+        "total transactions (including tnx to create contract",
+        "total ether received",
+        "Unique Received From Addresses",
+        "avg val received",
+        "Received Tnx",
+        "total ether balance",
+        "ERC20 max val rec",
+        "total Ether sent",
+        "Sent tnx",
+        "max value received",
+        "ERC20 min val rec",
+        "ERC20 uniq sent token name",
+        "ERC20 avg val rec"
+    ],
+    "imputation": {
+        "method": "median",
+        "fit_on": "training_data_only"
+    },
+    "random_forest": {
+        "n_estimators": 1000,
+        "class_weight": "balanced",
+        "random_state": 42,
+        "n_jobs": -1
+    },
+    "feature_selection": {
+        "original_features": 45,
+        "first_stage_features": 25,
+        "final_features": 20,
+        "method": "Training-only feature ranking and 5-fold stratified cross-validation",
+        "selection_metric": "F1",
+        "cv_mean_f1": 0.958712,
+        "cv_mean_roc_auc": 0.998257,
+        "cv_mean_pr_auc": 0.99474
+    },
+    "final_test_performance": {
+        "accuracy": 0.980701,
+        "precision": 0.987745,
+        "recall": 0.924312,
+        "f1": 0.954976,
+        "roc_auc": 0.997663,
+        "pr_auc": 0.99305
+    }
+}

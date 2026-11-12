@@ -1,0 +1,26 @@
+{
+    "target": "FLAG",
+    "feature_count": 20,
+    "features": [
+        "Total ERC20 tnxs",
+        "Time Diff between first and last (Mins)",
+        "ERC20 total Ether received",
+        "ERC20 uniq rec contract addr",
+        "ERC20 uniq rec token name",
+        "ERC20 uniq rec addr",
+        "Avg min between received tnx",
+        "total transactions (including tnx to create contract",
+        "total ether received",
+        "Unique Received From Addresses",
+        "avg val received",
+        "Received Tnx",
+        "total ether balance",
+        "ERC20 max val rec",
+        "total Ether sent",
+        "Sent tnx",
+        "max value received",
+        "ERC20 min val rec",
+        "ERC20 uniq sent token name",
+        "ERC20 avg val rec"
+    ]
+}

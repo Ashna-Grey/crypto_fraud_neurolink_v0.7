@@ -1,0 +1,8 @@
+services:
+  neurolink:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      FUSION_MODE: moe
+      PORT: "8000"

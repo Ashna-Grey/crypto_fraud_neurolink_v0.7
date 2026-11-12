@@ -1,0 +1,31 @@
+{
+  "wallet_id": "dataset_row_0_no_address",
+  "input_format": "raw-live",
+  "features": {
+    "Time Diff between first and last (Mins)": 704785.63,
+    "Total ERC20 tnxs": 265.0,
+    "Unique Received From Addresses": 40.0,
+    "ERC20 total Ether received": 35588543.78,
+    "ERC20 uniq rec contract addr": 58.0,
+    "ERC20 uniq rec addr": 54.0,
+    "ERC20 uniq rec token name": 57.0,
+    "total ether received": 586.4666748,
+    "avg val received": 6.589513,
+    "Avg min between received tnx": 1093.71,
+    "total transactions (including tnx to create contract": 810.0,
+    "max value received": 45.806785,
+    "ERC20 min val rec": 0.0,
+    "Received Tnx": 89.0,
+    "total ether balance": -279.2244185,
+    "min value received": 0.0,
+    "total Ether sent": 865.6910932,
+    "ERC20 avg val rec": 265586.1476,
+    "ERC20 max val rec": 15000000.0,
+    "Sent tnx": 721.0,
+    "Avg min between sent tnx": 844.26,
+    "max val sent": 31.22,
+    "avg val sent": 1.200681,
+    "Unique Sent To Addresses": 118.0,
+    "ERC20 uniq sent token name": 39.0
+  }
+}

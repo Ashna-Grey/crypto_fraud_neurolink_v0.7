@@ -1,0 +1,21 @@
+Rank,Feature
+1,Total ERC20 tnxs
+2,Time Diff between first and last (Mins)
+3,ERC20 uniq rec contract addr
+4,ERC20 uniq rec token name
+5,ERC20 uniq rec addr
+6,Avg min between received tnx
+7,total ether received
+8,total transactions (including tnx to create contract
+9,Unique Received From Addresses
+10,avg val received
+11,total ether balance
+12,Received Tnx
+13,ERC20 max val rec
+14,ERC20 total Ether received
+15,max value received
+16,total Ether sent
+17,Sent tnx
+18,ERC20 min val rec
+19,ERC20 uniq sent token name
+20,min value received

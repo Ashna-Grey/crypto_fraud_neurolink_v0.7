@@ -1,0 +1,4 @@
+# Optional, research-only EBM experiment. InterpretML is NOT needed to serve
+# trained portable MoE and GAM artifacts. Installs require internet access.
+-r requirements.txt
+interpret-core>=0.6,<1

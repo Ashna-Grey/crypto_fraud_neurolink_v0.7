@@ -1,0 +1,8 @@
+{
+  "provenance": "RF training indices, D1 dataset only; development configuration, not new holdout validation",
+  "rows": 6888,
+  "high_value_threshold": "90th percentile of total Ether sent + total ether received",
+  "dust_threshold": "10th percentile of avg val sent",
+  "contract_threshold": "UNAVAILABLE: D1 processed data lacks total_eth_sent_contracts and created_contracts",
+  "note": "This is not independent research validation and must not be used to claim rule precision."
+}

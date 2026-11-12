@@ -1,0 +1,11 @@
+.git
+__pycache__
+.pytest_cache
+*.pyc
+01_Dataset
+**/analysis/*.png
+**/analysis/*.pdf
+**/analysis/*.csv
+**/analysis/live_input_audit
+**/training
+**/evaluation

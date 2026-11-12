@@ -1,0 +1,73 @@
+{
+  "input_file": "D2_live_wallet_dataset.csv",
+  "input_format": "raw-live",
+  "input_rows": 10000,
+  "required_feature_count": 20,
+  "present_required_feature_count": 20,
+  "missing_required_feature_columns": [],
+  "schema_status": "PASS",
+  "input_rows_with_any_missing_feature": 3946,
+  "input_rows_with_all_features_missing": 0,
+  "total_missing_feature_cells_before_imputation": 16666,
+  "missing_feature_cell_pct": 8.333,
+  "missingness_warning": true,
+  "input_quality_warning_heuristics": {
+    "feature_cell_missing_pct_greater_than": 5.0,
+    "warning_is_heuristic_not_a_statistical_test": true
+  },
+  "total_observed_values_outside_training_minmax": 1,
+  "observed_feature_cell_count": 183334,
+  "observed_values_outside_training_minmax_pct": 0.0005454525619906837,
+  "distribution_warning_features": [],
+  "distribution_warning_heuristics": {
+    "observed_values_outside_training_minmax_pct_greater_than": 10.0,
+    "absolute_live_median_shift_greater_than_training_iqr_multiple": 3.0,
+    "warning_is_heuristic_not_a_statistical_test": true,
+    "an_out_of_range_value_can_be_a_true_behavioural_anomaly_not_a_bad_input": true
+  },
+  "preprocessing": {
+    "input_format": "raw-live",
+    "column_names_trimmed": true,
+    "required_feature_count": 20,
+    "transformed_feature_count": 14,
+    "transformed_features": [
+      "total ether received",
+      "avg val received",
+      "Avg min between received tnx",
+      "max value received",
+      "ERC20 min val rec",
+      "min value received",
+      "total Ether sent",
+      "ERC20 avg val rec",
+      "ERC20 max val rec",
+      "Avg min between sent tnx",
+      "max val sent",
+      "avg val sent",
+      "ERC20 uniq sent token name",
+      "current_eth_balance"
+    ],
+    "missing_required_feature_columns": [],
+    "feature_value_transform": "sign(x) * log(1 + abs(x)) for listed features; unchanged for other B6b features",
+    "missing_value_handling": "Preserve NaN for member-specific training-median imputation at scoring time"
+  },
+  "reference_row_comparison": {
+    "reference_data": "D2_IsolationForest_preprocessed_23_features.csv",
+    "row_alignment_assumed_by_user": true,
+    "rows_compared": 10000,
+    "feature_cells_compared": 200000,
+    "feature_cells_matching_tolerance": 200000,
+    "feature_cell_match_pct": 100.0,
+    "max_absolute_difference": 4.656612873077393e-10,
+    "exact_transform_reconstruction_within_tolerance": true,
+    "tolerance": {
+      "rtol": 1e-07,
+      "atol": 1e-07
+    },
+    "note": "Only valid when the input and reference are the same wallets in the same row order."
+  },
+  "overall_assessment": "SCHEMA_OK_INPUT_QUALITY_REVIEW",
+  "outputs": {
+    "feature_audit_csv": "live_feature_compatibility.csv",
+    "summary_json": "live_input_audit.json"
+  }
+}

@@ -1,0 +1,11 @@
+{
+    "classes": [
+        0,
+        1
+    ],
+    "mapping": {
+        "0": "Non-Fraud",
+        "1": "Fraud"
+    },
+    "target_column": "FLAG"
+}

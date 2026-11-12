@@ -1,0 +1,206 @@
+{
+  "historical_D1_metrics": {
+    "RF_raw": {
+      "n": 924,
+      "fraud": 164,
+      "roc_auc": 0.997733,
+      "pr_auc": 0.990848,
+      "brier": 0.015915
+    },
+    "GAM": {
+      "n": 924,
+      "fraud": 164,
+      "roc_auc": 0.996895,
+      "pr_auc": 0.987221,
+      "brier": 0.01784
+    },
+    "MoE": {
+      "n": 924,
+      "fraud": 164,
+      "roc_auc": 0.997713,
+      "pr_auc": 0.990848,
+      "brier": 0.013886
+    },
+    "RF_calibrated": {
+      "n": 924,
+      "fraud": 164,
+      "roc_auc": 0.997733,
+      "pr_auc": 0.990848,
+      "brier": 0.014295
+    }
+  },
+  "historical_dataset_is_independent_external_test": false,
+  "paired_bootstrap_95pct_conditional": {
+    "GAM_brier_minus_RF": [
+      2.14e-05,
+      0.00734552
+    ],
+    "GAM_AUC_minus_RF": [
+      -0.00216674,
+      0.00027319
+    ],
+    "MoE_brier_minus_RF": [
+      -0.00138804,
+      0.00039696
+    ],
+    "MoE_AUC_minus_RF": [
+      -6.027e-05,
+      0.0
+    ]
+  },
+  "activity_subgroups": {
+    "0-10": {
+      "RF_raw": {
+        "n": 475,
+        "fraud": 98,
+        "roc_auc": 0.998823,
+        "pr_auc": 0.995557,
+        "brier": 0.012743
+      },
+      "GAM": {
+        "n": 475,
+        "fraud": 98,
+        "roc_auc": 0.997835,
+        "pr_auc": 0.991278,
+        "brier": 0.014442
+      },
+      "MoE": {
+        "n": 475,
+        "fraud": 98,
+        "roc_auc": 0.998782,
+        "pr_auc": 0.995557,
+        "brier": 0.011639
+      },
+      "RF_calibrated": {
+        "n": 475,
+        "fraud": 98,
+        "roc_auc": 0.998823,
+        "pr_auc": 0.995557,
+        "brier": 0.012053
+      }
+    },
+    "11-50": {
+      "RF_raw": {
+        "n": 201,
+        "fraud": 50,
+        "roc_auc": 0.993377,
+        "pr_auc": 0.985422,
+        "brier": 0.026055
+      },
+      "GAM": {
+        "n": 201,
+        "fraud": 50,
+        "roc_auc": 0.995629,
+        "pr_auc": 0.99041,
+        "brier": 0.027948
+      },
+      "MoE": {
+        "n": 201,
+        "fraud": 50,
+        "roc_auc": 0.993377,
+        "pr_auc": 0.985422,
+        "brier": 0.022099
+      },
+      "RF_calibrated": {
+        "n": 201,
+        "fraud": 50,
+        "roc_auc": 0.993377,
+        "pr_auc": 0.985422,
+        "brier": 0.021953
+      }
+    },
+    "51-200": {
+      "RF_raw": {
+        "n": 135,
+        "fraud": 12,
+        "roc_auc": 0.99729,
+        "pr_auc": 0.976389,
+        "brier": 0.013772
+      },
+      "GAM": {
+        "n": 135,
+        "fraud": 12,
+        "roc_auc": 0.992547,
+        "pr_auc": 0.946181,
+        "brier": 0.015307
+      },
+      "MoE": {
+        "n": 135,
+        "fraud": 12,
+        "roc_auc": 0.99729,
+        "pr_auc": 0.976389,
+        "brier": 0.012464
+      },
+      "RF_calibrated": {
+        "n": 135,
+        "fraud": 12,
+        "roc_auc": 0.99729,
+        "pr_auc": 0.976389,
+        "brier": 0.013435
+      }
+    },
+    ">200": {
+      "RF_raw": {
+        "n": 113,
+        "fraud": 4,
+        "roc_auc": 0.997706,
+        "pr_auc": 0.95,
+        "brier": 0.013769
+      },
+      "GAM": {
+        "n": 113,
+        "fraud": 4,
+        "roc_auc": 0.988532,
+        "pr_auc": 0.733333,
+        "brier": 0.017172
+      },
+      "MoE": {
+        "n": 113,
+        "fraud": 4,
+        "roc_auc": 0.997706,
+        "pr_auc": 0.95,
+        "brier": 0.01042
+      },
+      "RF_calibrated": {
+        "n": 113,
+        "fraud": 4,
+        "roc_auc": 0.997706,
+        "pr_auc": 0.95,
+        "brier": 0.011122
+      }
+    }
+  },
+  "calibration_reliability_bins": [
+    {
+      "predicted_mean": 6.116350077931881e-12,
+      "observed_fraud_fraction": 0.0,
+      "n": 185
+    },
+    {
+      "predicted_mean": 3.6981975804711855e-11,
+      "observed_fraud_fraction": 0.0,
+      "n": 185
+    },
+    {
+      "predicted_mean": 9.997222621469167e-05,
+      "observed_fraud_fraction": 0.0,
+      "n": 184
+    },
+    {
+      "predicted_mean": 0.027146415338325215,
+      "observed_fraud_fraction": 0.016216216216216217,
+      "n": 185
+    },
+    {
+      "predicted_mean": 0.8857360736662864,
+      "observed_fraud_fraction": 0.8702702702702703,
+      "n": 185
+    }
+  ],
+  "gate_aggregate": {
+    "mean_RF_weight": 0.9999871067909161,
+    "mean_IF_adapter_weight": 1.0914485174221027e-05,
+    "mean_rule_adapter_weight": 1.9787239097761774e-06,
+    "RF_weight_above_90pct_fraction": 1.0
+  }
+}

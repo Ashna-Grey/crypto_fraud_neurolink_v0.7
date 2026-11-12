@@ -1,0 +1,48 @@
+{
+  "version": "0.7.0",
+  "api_health_statuses": {
+    "/health": 200,
+    "/models/status": 200,
+    "/schema": 200,
+    "/learned/metrics": 200
+  },
+  "cases": [
+    {
+      "case_id": "d1_label_0",
+      "http_status": 200,
+      "decision": "LEGITIMATE",
+      "fraud_probability": 3.758347444041641e-11
+    },
+    {
+      "case_id": "d1_label_1",
+      "http_status": 200,
+      "decision": "FRAUD",
+      "fraud_probability": 0.9962382283466971
+    },
+    {
+      "case_id": "original_zip_example",
+      "http_status": 200,
+      "decision": "LEGITIMATE",
+      "fraud_probability": 0.0018223444177969635
+    },
+    {
+      "case_id": "slow_rate_context",
+      "http_status": 200,
+      "decision": "LEGITIMATE",
+      "fraud_probability": 0.05128778427157632
+    },
+    {
+      "case_id": "fast_rate_context",
+      "http_status": 200,
+      "decision": "FRAUD",
+      "fraud_probability": 0.5195285091873054
+    },
+    {
+      "case_id": "missing_required_feature",
+      "http_status": 422,
+      "decision": null,
+      "fraud_probability": null
+    }
+  ],
+  "warning": "Smoke tests do not prove external generalization; synthetic examples have no ground truth labels."
+}

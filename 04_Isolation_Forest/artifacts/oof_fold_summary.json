@@ -1,0 +1,39 @@
+{
+  "folds": [
+    {
+      "fold": 1,
+      "training_rows": 8000,
+      "validation_rows": 2000,
+      "validation_score_mean": 0.44287844164601176,
+      "validation_score_std": 0.05607796527391601
+    },
+    {
+      "fold": 2,
+      "training_rows": 8000,
+      "validation_rows": 2000,
+      "validation_score_mean": 0.4427474616845184,
+      "validation_score_std": 0.05831250243808056
+    },
+    {
+      "fold": 3,
+      "training_rows": 8000,
+      "validation_rows": 2000,
+      "validation_score_mean": 0.44120454271542564,
+      "validation_score_std": 0.055069590736601545
+    },
+    {
+      "fold": 4,
+      "training_rows": 8000,
+      "validation_rows": 2000,
+      "validation_score_mean": 0.4451078995843642,
+      "validation_score_std": 0.059312798259513855
+    },
+    {
+      "fold": 5,
+      "training_rows": 8000,
+      "validation_rows": 2000,
+      "validation_score_mean": 0.4420998731654563,
+      "validation_score_std": 0.05255673327971514
+    }
+  ]
+}

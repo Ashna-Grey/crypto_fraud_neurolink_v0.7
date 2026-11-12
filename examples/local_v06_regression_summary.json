@@ -1,0 +1,115 @@
+[
+  {
+    "case_id": "d1_label_0",
+    "status": "OK",
+    "rf_fraud_probability": 0.0045513690984955975,
+    "if_anomaly_percentile": 73.35895950689007,
+    "if_applicability": 0.95,
+    "rule_score": 0.0,
+    "rule_coverage": 0.75,
+    "context_trace": [
+      "IF_ROLE"
+    ],
+    "risk_priority": 0.004551,
+    "review_index": 0.1325,
+    "decision": "LEGITIMATE",
+    "reasons": [],
+    "advisories": [
+      "RULE_EVIDENCE_INCOMPLETE"
+    ]
+  },
+  {
+    "case_id": "d1_label_1",
+    "status": "OK",
+    "rf_fraud_probability": 0.9922547872053153,
+    "if_anomaly_percentile": 45.89662600353633,
+    "if_applicability": 0.95,
+    "rule_score": 0.0,
+    "rule_coverage": 0.75,
+    "context_trace": [
+      "IF_ROLE"
+    ],
+    "risk_priority": 0.992255,
+    "review_index": 0.149707,
+    "decision": "FRAUD",
+    "reasons": [],
+    "advisories": [
+      "RULE_EVIDENCE_INCOMPLETE"
+    ]
+  },
+  {
+    "case_id": "original_zip_example",
+    "status": "OK",
+    "rf_fraud_probability": 0.006267634061702635,
+    "if_anomaly_percentile": 94.37299712134,
+    "if_applicability": 0.2,
+    "rule_score": 0.0,
+    "rule_coverage": 0.75,
+    "context_trace": [
+      "VOLUME_CONTEXT",
+      "SLOW_VOLUME",
+      "IF_ROLE"
+    ],
+    "risk_priority": 0.006268,
+    "review_index": 0.256652,
+    "decision": "MANUAL_REVIEW",
+    "reasons": [
+      "IF_TRAINING_APPLICABILITY_LOW_OR_UNAVAILABLE"
+    ],
+    "advisories": [
+      "RULE_EVIDENCE_INCOMPLETE"
+    ]
+  },
+  {
+    "case_id": "slow_rate_context",
+    "status": "OK",
+    "rf_fraud_probability": 0.02639806725593743,
+    "if_anomaly_percentile": 94.2776506907813,
+    "if_applicability": 0.2,
+    "rule_score": 0.0,
+    "rule_coverage": 0.75,
+    "context_trace": [
+      "VOLUME_CONTEXT",
+      "SLOW_VOLUME",
+      "IF_ROLE"
+    ],
+    "risk_priority": 0.026398,
+    "review_index": 0.300433,
+    "decision": "MANUAL_REVIEW",
+    "reasons": [
+      "IF_TRAINING_APPLICABILITY_LOW_OR_UNAVAILABLE"
+    ],
+    "advisories": [
+      "RULE_EVIDENCE_INCOMPLETE"
+    ]
+  },
+  {
+    "case_id": "fast_rate_context",
+    "status": "OK",
+    "rf_fraud_probability": 0.5149025416710719,
+    "if_anomaly_percentile": 94.34646196992429,
+    "if_applicability": 0.2,
+    "rule_score": 0.037148,
+    "rule_coverage": 0.75,
+    "context_trace": [
+      "VOLUME_CONTEXT",
+      "FAST_VOLUME",
+      "IF_ROLE"
+    ],
+    "risk_priority": 0.518281,
+    "review_index": 0.345,
+    "decision": "MANUAL_REVIEW",
+    "reasons": [
+      "IF_TRAINING_APPLICABILITY_LOW_OR_UNAVAILABLE"
+    ],
+    "advisories": [
+      "RULE_EVIDENCE_INCOMPLETE"
+    ]
+  },
+  {
+    "case_id": "missing_required_feature",
+    "status": "EXPECTED_INPUT_ERROR",
+    "error_type": "ValueError",
+    "error": "Missing RF features: Sent tnx"
+  }
+]

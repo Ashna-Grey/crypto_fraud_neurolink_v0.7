@@ -1,0 +1,64 @@
+{
+  "model_name": "IsolationForest_B6b",
+  "algorithm": "sklearn.ensemble.IsolationForest",
+  "n_estimators": 300,
+  "contamination": "auto",
+  "random_state": 42,
+  "n_jobs": -1,
+  "selected_feature_count": 20,
+  "excluded_features": [
+    "Sent tnx",
+    "Received Tnx",
+    "total transactions (including tnx to create contract)"
+  ],
+  "score_definition": "anomaly_score = -model.score_samples(X); higher means more anomalous",
+  "score_percentile_reference": "member-specific out-of-bag anomaly scores from bootstrap Isolation Forest ensemble",
+  "percentile_bands": {
+    "ROUTINE": "below P90",
+    "ELEVATED_ANOMALY": "P90 to below P95",
+    "HIGH_ANOMALY": "P95 to below P99",
+    "EXTREME_ANOMALY": "P99 or above"
+  },
+  "fraud_probability": false,
+  "scaling": "none",
+  "imputation": "median learned from training data; fold-local for out-of-fold reference construction",
+  "warning": "Anomaly percentiles and priority bands are not fraud probabilities or confirmed-fraud labels.",
+  "ensemble_size": 25,
+  "mu_definition": "mean member-specific empirical anomaly percentile on [0, 1]; not fraud probability",
+  "sigma_squared_definition": "sample variance (ddof=1) of member-specific empirical anomaly percentiles; bootstrap model disagreement, not fusion-calibrated predictive variance",
+  "next_calibration_stage": "Requires compatible labelled fraud examples before mu can be interpreted as fraud probability; validate variance before inverse-variance weighting.",
+  "if_prediction_definition": "Anomaly-priority band: ROUTINE, ELEVATED_ANOMALY, HIGH_ANOMALY, EXTREME_ANOMALY; not a fraud classification.",
+  "input_quality_status": {
+    "PASS": "No required model feature values are missing and no observed feature value is outside the model training min/max range.",
+    "WARN": "One or more feature values are missing and median-imputed, or one or more observed values lie outside training min/max. Outside-range can indicate a genuine anomaly, not necessarily bad input.",
+    "UNUSABLE": "All 20 required feature values are missing; numeric anomaly outputs are suppressed and if_prediction is NOT_SCORED_INPUT_UNUSABLE."
+  },
+  "raw_live_preprocessing": {
+    "column_name_normalization": "Trim surrounding whitespace; reject duplicate columns after normalization.",
+    "signed_log1p_features": [
+      "total ether received",
+      "avg val received",
+      "Avg min between received tnx",
+      "max value received",
+      "ERC20 min val rec",
+      "min value received",
+      "total Ether sent",
+      "ERC20 avg val rec",
+      "ERC20 max val rec",
+      "Avg min between sent tnx",
+      "max val sent",
+      "avg val sent",
+      "ERC20 uniq sent token name",
+      "current_eth_balance"
+    ],
+    "transform_formula": "sign(x) * log(1 + abs(x))",
+    "missing_values": "Preserved through preprocessing so inference can flag and impute them; invalid text/infinite values are rejected."
+  },
+  "distribution_shift_note": "Dataset audit reports per-feature missingness, training range exceedance, quantiles, and a transparent heuristic warning. It is not a calibrated statistical drift test.",
+  "live_input_audit_defaults": {
+    "max_missing_feature_cell_pct": 5.0,
+    "max_observed_values_outside_training_minmax_pct_per_feature": 10.0,
+    "max_absolute_live_median_shift_training_iqr_multiple": 3.0,
+    "interpretation": "Engineering review heuristics, not statistically calibrated drift tests."
+  }
+}
