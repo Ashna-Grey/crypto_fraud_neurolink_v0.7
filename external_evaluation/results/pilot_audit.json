@@ -1,0 +1,39 @@
+{
+  "evaluation_type": "archived_five_wallet_poison_hunter_pilot",
+  "sample_requested": 5,
+  "processed": 5,
+  "collection_complete": 4,
+  "status_counts": {
+    "abstained_manual_review": 4,
+    "error": 1
+  },
+  "binary_with_probabilities": 0,
+  "complete_history_binary_predictions": 0,
+  "decision_probability_mismatch_count": 0,
+  "label_counts_processed": {
+    "0": 3,
+    "1": 2
+  },
+  "status_by_ground_truth_label": {
+    "0": {
+      "abstained_manual_review": 2,
+      "error": 1
+    },
+    "1": {
+      "abstained_manual_review": 2
+    }
+  },
+  "error_samples": [],
+  "provisional_metrics_complete_collections": null,
+  "diagnostic_metrics_all_classified": null,
+  "publication_grade_external_accuracy": null,
+  "why_not_publication_grade": [
+    "Original D1 address overlap cannot be excluded: original D1 has no wallet identifiers.",
+    "Exact D1 feature definitions and preprocessing parity have not been proven; ERC20 values and ETH balance may be missing or incomparable.",
+    "Poison-Hunter is a specialized retrospective address-poisoning dataset, not representative of all fraud.",
+    "Benign addresses are selected from popular Etherscan wallets; the sampled class balance is artificial.",
+    "No event-time cutoff is supplied for attack labels; current-chain information may postdate labeling."
+  ],
+  "note": "Historical pilot output imported from user files; not a new RPC/API run.",
+  "manual_review_is_not_correct_prediction": true
+}

@@ -1,0 +1,6 @@
+address,advisories,ambiguous_token_value_features,complete,erc20_events,error,if_present,label,native_events,prediction,probability,rf_present,status,unique_transfer_events,unique_tx_hashes,valid_for_primary
+0x247ac58cd31541c65b3aaa47e047745107d13873,,"['ERC20 max val rec', 'ERC20 min val rec', 'ERC20 avg val rec', 'ERC20 total Ether received']",True,6055,,17,0,91,MANUAL_REVIEW,,16,predicted,6146,3032,False
+0x1896adbe708bf91158748b3f33738ba497a69e8f,,"['ERC20 max val rec', 'ERC20 min val rec', 'ERC20 avg val rec', 'ERC20 total Ether received']",True,0,,17,0,0,MANUAL_REVIEW,,17,predicted,0,0,False
+0xbe589d2d9608aced124cc1a0719e6ffc30a841b8,,"['ERC20 max val rec', 'ERC20 min val rec', 'ERC20 avg val rec', 'ERC20 total Ether received']",True,3,,15,1,2,MANUAL_REVIEW,,15,predicted,5,4,False
+0x33a2e5c686ba888a731109f8a391f2e0993aeaa4,,"['ERC20 max val rec', 'ERC20 min val rec', 'ERC20 avg val rec', 'ERC20 total Ether received']",True,2,,15,1,2,MANUAL_REVIEW,,15,predicted,4,3,False
+0xe12af1218b4e9272e9628d7c7dc6354d137d024e,,,,,"IncompleteRead(113916 bytes read, 463298 more expected)",,0,,,,,error,,,False

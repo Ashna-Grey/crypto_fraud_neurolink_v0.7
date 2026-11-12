@@ -1,0 +1,9 @@
+{
+  "original_uploaded_model_zip_sha256": "ee14828fd4d750e4d15f965b7676ece5d731df7248c3cc2de000df0998da0ca2",
+  "original_model_files_modified": false,
+  "evaluation_folder_is_append_only": true,
+  "poison_hunter_labels_source": "Poison-Hunter-main.zip",
+  "sample_seed_original_pilot": 20261112,
+  "model_runtime_unchanged": true,
+  "notes": "Source ZIP hash proves identity of uploaded original; add-on contains no model weights, no modified model source files and no API secrets."
+}

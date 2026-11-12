@@ -1,0 +1,17 @@
+{
+  "snapshot_block": "0x192cd99",
+  "sample_requested": 5,
+  "complete_collections": 4,
+  "coverage_screened_predictions": 0,
+  "exploratory_predictions": 0,
+  "screened_metrics_not_fully_independent": null,
+  "exploratory_metrics": null,
+  "limitations": [
+    "D1 wallet-address overlap cannot be ruled out from supplied D1 feature-only CSV; screened metrics are NOT independently verified",
+    "ERC20 numeric token quantities cannot be compared across token types; ambiguous fields remain null",
+    "Historical Poison-Hunter labels have no per-wallet event cutoff; this is retrospective classification, not pre-attack forecasting",
+    "Current Alchemy balance at snapshot is not a historical label-time balance",
+    "Source D1 feature definitions and transfer-category parity require further validation",
+    "A balanced 100/100 sample does not estimate deployment precision at real-world prevalence"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "known_D2_training_addresses": 10000,
+  "manifest_D2_overlap": 0,
+  "source_pool_D2_overlap": 50,
+  "poison_hunter_phishing_addresses": 5890,
+  "poison_hunter_benign_addresses": 1154,
+  "poison_hunter_groundtruth_total": 7044,
+  "detected_TP_subset_count_not_independent": 5729,
+  "manifest_total": 200,
+  "manifest_phishing": 100,
+  "manifest_benign": 100,
+  "duplicate_or_mislabeled_addresses": 0,
+  "labels_consistent": true,
+  "possible_D1_overlap": "unknown: D1 lacks address IDs",
+  "dataset_is_wallet_feature_matrix": false,
+  "model_predictions_from_labels_alone_possible": false
+}

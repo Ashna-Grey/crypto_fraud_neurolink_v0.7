@@ -1,0 +1,49 @@
+{
+  "type": "local_frozen_v0.7_contract_check_not_external_validation",
+  "total": 6,
+  "passed": 6,
+  "cases": [
+    {
+      "case_id": "d1_label_0",
+      "passed_contract": true,
+      "status": "classified",
+      "decision": "LEGITIMATE",
+      "fraud_probability": 3.758347444041641e-11
+    },
+    {
+      "case_id": "d1_label_1",
+      "passed_contract": true,
+      "status": "classified",
+      "decision": "FRAUD",
+      "fraud_probability": 0.9962382283466971
+    },
+    {
+      "case_id": "original_zip_example",
+      "passed_contract": true,
+      "status": "classified",
+      "decision": "LEGITIMATE",
+      "fraud_probability": 0.0018223444177969635
+    },
+    {
+      "case_id": "slow_rate_context",
+      "passed_contract": true,
+      "status": "classified",
+      "decision": "LEGITIMATE",
+      "fraud_probability": 0.05128778427157632
+    },
+    {
+      "case_id": "fast_rate_context",
+      "passed_contract": true,
+      "status": "classified",
+      "decision": "FRAUD",
+      "fraud_probability": 0.5195285091873054
+    },
+    {
+      "case_id": "missing_required_feature",
+      "passed_contract": true,
+      "status": "input_rejected",
+      "decision": null,
+      "fraud_probability": null
+    }
+  ]
+}

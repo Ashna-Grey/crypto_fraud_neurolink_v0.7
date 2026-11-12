@@ -1,0 +1,124 @@
+{
+  "evaluation_type": "historical_D1_non_independent",
+  "note": "These are original D1 historical partition results, NOT Poison-Hunter validation.",
+  "records": 924,
+  "metrics": {
+    "RF_raw": {
+      "n": 924,
+      "positive_n": 164,
+      "negative_n": 760,
+      "TP": 155,
+      "TN": 748,
+      "FP": 12,
+      "FN": 9,
+      "accuracy": 0.9772727272727273,
+      "precision": 0.9281437125748503,
+      "recall": 0.9451219512195121,
+      "f1": 0.9365558912386707,
+      "accuracy_wilson_95pct_ci": [
+        0.9655058156224773,
+        0.9850876199425175
+      ],
+      "recall_wilson_95pct_ci": [
+        0.8990054569513521,
+        0.970863054832573
+      ],
+      "precision_wilson_95pct_ci": [
+        0.8786129749579804,
+        0.9584203832626678
+      ],
+      "roc_auc": 0.9977334724005135,
+      "average_precision": 0.9908484954605294,
+      "brier": 0.01591472943722944,
+      "threshold": 0.5
+    },
+    "RF_calibrated": {
+      "n": 924,
+      "positive_n": 164,
+      "negative_n": 760,
+      "TP": 155,
+      "TN": 748,
+      "FP": 12,
+      "FN": 9,
+      "accuracy": 0.9772727272727273,
+      "precision": 0.9281437125748503,
+      "recall": 0.9451219512195121,
+      "f1": 0.9365558912386707,
+      "accuracy_wilson_95pct_ci": [
+        0.9655058156224773,
+        0.9850876199425175
+      ],
+      "recall_wilson_95pct_ci": [
+        0.8990054569513521,
+        0.970863054832573
+      ],
+      "precision_wilson_95pct_ci": [
+        0.8786129749579804,
+        0.9584203832626678
+      ],
+      "roc_auc": 0.9977334724005135,
+      "average_precision": 0.9908484954605294,
+      "brier": 0.014294791471272179,
+      "threshold": 0.5
+    },
+    "GAM": {
+      "n": 924,
+      "positive_n": 164,
+      "negative_n": 760,
+      "TP": 156,
+      "TN": 743,
+      "FP": 17,
+      "FN": 8,
+      "accuracy": 0.9729437229437229,
+      "precision": 0.9017341040462428,
+      "recall": 0.9512195121951219,
+      "f1": 0.9258160237388724,
+      "accuracy_wilson_95pct_ci": [
+        0.9603638676190703,
+        0.9816074052650626
+      ],
+      "recall_wilson_95pct_ci": [
+        0.906706729410632,
+        0.975077789384032
+      ],
+      "precision_wilson_95pct_ci": [
+        0.8482749610592738,
+        0.9377398169625318
+      ],
+      "roc_auc": 0.9968950577663671,
+      "average_precision": 0.9872208632224871,
+      "brier": 0.01784045698158514,
+      "threshold": 0.5
+    },
+    "MoE": {
+      "n": 924,
+      "positive_n": 164,
+      "negative_n": 760,
+      "TP": 155,
+      "TN": 748,
+      "FP": 12,
+      "FN": 9,
+      "accuracy": 0.9772727272727273,
+      "precision": 0.9281437125748503,
+      "recall": 0.9451219512195121,
+      "f1": 0.9365558912386707,
+      "accuracy_wilson_95pct_ci": [
+        0.9655058156224773,
+        0.9850876199425175
+      ],
+      "recall_wilson_95pct_ci": [
+        0.8990054569513521,
+        0.970863054832573
+      ],
+      "precision_wilson_95pct_ci": [
+        0.8786129749579804,
+        0.9584203832626678
+      ],
+      "roc_auc": 0.9977134146341463,
+      "average_precision": 0.9908484954605294,
+      "brier": 0.013886151601214283,
+      "threshold": 0.5
+    }
+  },
+  "report_matches_shipped_reference": true
+}
